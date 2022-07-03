@@ -40,12 +40,12 @@ public class EmployeeController {
 		return empservice.getEmployeeByEmpno(empno);
 	}
 	
-	@PutMapping("/edit-emp/{empno}")
+	@PutMapping("/update-emp/{empno}")
 	public void updateEmployee(@PathVariable int empno, @RequestBody EmployeeDTO employeeDetails) {
 		empservice.updateEmployee(employeeDetails);
 	}
 	
-	@DeleteMapping("/remove-emp/{empno}")
+	@DeleteMapping("/delete-emp/{empno}")
 	public void deleteEmployee(@PathVariable int empno) {
 		empservice.deleteEmployee(empno);
 	}
