@@ -1,0 +1,33 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.mapper.EmployeeMapper">
+
+	<!-- 전체 사원 조회 -->
+	<select id="getAllEmployees" resultType="com.spring.model.EmployeeDTO">
+		SELECT empno, ename, job, mgr, hiredate, sal, comm, deptno
+		FROM emp
+	</select>
+	
+	<!-- 사원 ID값으로 사원 조회 -->
+	<select id="getEmployeeByEmpno" resultType="com.spring.model.EmployeeDTO">
+		SELECT empno, ename, job, mgr, hiredate, sal, comm, deptno
+		FROM emp
+		WHERE empno = #{empno}
+	</select>
+	
+	<!-- 사원 등록 -->
+	<insert id="insertEmployee" parameterType="com.spring.model.EmployeeDTO">
+		INSERT INTO emp(empno, ename, job, mgr, hiredate, sal, comm, deptno)
+		VALUES(#{empno}, #{ename}, #{job}, #{mgr}, #{hiredate}, #{sal}, #{comm}, #{deptno})
+	</insert>
+	
+	<!-- 사원 수정 -->
+	<update id="updateEmployee" parameterType="com.spring.model.EmployeeDTO">
+		UPDATE emp 
+		SET empno = #{empno}, ename = #{ename}, job = #{job}, mgr = #{mgr}, sal=#{sal}, comm = #{comm}, deptno = #{deptno}
+		WHERE empno = #{empno}
+	</update>
+	
+</mapper>

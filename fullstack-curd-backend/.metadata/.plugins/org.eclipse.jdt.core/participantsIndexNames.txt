@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\dev\99.project\fullstack-crud\fullstack-curd-backend\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1113137493.index
+\fullstack_CRUD_backend\src\main\java
+C:\dev\99.project\fullstack-crud\fullstack-curd-backend\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2484105946.index
+\fullstack-crud-backend\src\main\java
